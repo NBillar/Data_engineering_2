@@ -35,7 +35,7 @@ def produce_from_file(producer, file):
 
 def run_job():
     producer = KafkaProducer(
-        bootstrap_servers="104.197.135.44:9092"
+        bootstrap_servers="34.31.225.211:9092"
     )  # use your VM's external IP Here!
     # Change the path to your laptop!
     # if you want to learn about threading in python, check the following article
