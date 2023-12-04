@@ -35,25 +35,25 @@ def produce_from_file(producer, file):
 
 def run_job():
     producer = KafkaProducer(
-        bootstrap_servers="34.31.225.211:9092"
+        bootstrap_servers="104.154.219.138:9092"
     )  # use your VM's external IP Here!
     # Change the path to your laptop!
     # if you want to learn about threading in python, check the following article
     # https://realpython.com/intro-to-python-threading/
     # if you want to schedule a job https://www.geeksforgeeks.org/python-schedule-library/
     t1 = threading.Thread(target=produce_from_file, args=(producer, "data\Review1.csv"))
-    t2 = threading.Thread(target=produce_from_file, args=(producer, "data\Review2.csv"))
-    t3 = threading.Thread(target=produce_from_file, args=(producer, "data\Review3.csv"))
-    t4 = threading.Thread(target=produce_from_file, args=(producer, "data\Review4.csv"))
+    # t2 = threading.Thread(target=produce_from_file, args=(producer, "data\Review2.csv"))
+    # t3 = threading.Thread(target=produce_from_file, args=(producer, "data\Review3.csv"))
+    # t4 = threading.Thread(target=produce_from_file, args=(producer, "data\Review4.csv"))
     t1.start()
-    t2.start()
-    t3.start()
-    t4.start()
+    # t2.start()
+    # t3.start()
+    # t4.start()
 
     t1.join()
-    t2.join()
-    t3.join()
-    t4.join()
+    # t2.join()
+    # t3.join()
+    # t4.join()
 
 
 if __name__ == "__main__":
