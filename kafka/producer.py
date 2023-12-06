@@ -48,10 +48,10 @@ def run_job():
     # if you want to learn about threading in python, check the following article
     # https://realpython.com/intro-to-python-threading/
     # if you want to schedule a job https://www.geeksforgeeks.org/python-schedule-library/
-    t1 = threading.Thread(target=produce_from_file, args=(producer, "C:/Users/woute/OneDrive/Documenten/GitHub/Wouter/Data_engineering_2/data/Review1.csv"))
-    t2 = threading.Thread(target=produce_from_file, args=(producer, "C:/Users/woute/OneDrive/Documenten/GitHub/Wouter/Data_engineering_2/data/Review2.csv"))
-    t3 = threading.Thread(target=produce_from_file, args=(producer, "C:/Users/woute/OneDrive/Documenten/GitHub/Wouter/Data_engineering_2/data/Review3.csv"))
-    t4 = threading.Thread(target=produce_from_file, args=(producer, "C:/Users/woute/OneDrive/Documenten/GitHub/Wouter/Data_engineering_2/data/Review4.csv"))
+    t1 = threading.Thread(target=produce_from_file, args=(producer, "C:\Users\20202016\Documents\Master\Data Engineering\assignments\Data_Engineering_2\data\Review1.csv"))
+    t2 = threading.Thread(target=produce_from_file, args=(producer, "C:\Users\20202016\Documents\Master\Data Engineering\assignments\Data_Engineering_2\data\Review2.csv"))
+    t3 = threading.Thread(target=produce_from_file, args=(producer, "C:\Users\20202016\Documents\Master\Data Engineering\assignments\Data_Engineering_2\data\Review3.csv"))
+    t4 = threading.Thread(target=produce_from_file, args=(producer, "C:\Users\20202016\Documents\Master\Data Engineering\assignments\Data_Engineering_2\data\Review4.csv"))
     t1.start()
     t2.start()
     t3.start()
